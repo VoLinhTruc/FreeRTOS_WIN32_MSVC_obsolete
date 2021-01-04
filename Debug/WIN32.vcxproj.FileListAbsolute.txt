@@ -1,0 +1,7 @@
+C:\Users\Bico\Desktop\WIN32-MSVC\Debug\RTOSDemo.exe
+P:\WIN32-MSVC\Debug\RTOSDemo.exe
+P:\FreeRTOS\Source_Code\Test\Test1\Debug\RTOSDemo.exe
+D:\Bico\HOC\Other\FreeRTOS\Source\Test\WIN32-MSVC\Debug\RTOSDemo.exe
+C:\Users\PERITEC-10\Desktop\FreeRTOS_WIN32\Debug\RTOSDemo.exe
+E:\HOC\FreeRTOS\FreeRTOS_WIN32_MSVC-master\Debug\RTOSDemo.exe
+E:\HOC\FreeRTOS\FreeRTOS_WIN32_MSVC\Debug\RTOSDemo.exe
