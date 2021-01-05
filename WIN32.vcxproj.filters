@@ -172,13 +172,13 @@
     <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Demo\Common\Minimal\TaskNotifyArray.c">
       <Filter>Demo App Source\Full_Demo\Common Demo Tasks</Filter>
     </ClCompile>
-    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\Tree_Back_Executing_Task.c">
-      <Filter>My_Code\Tree_Back_Model</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\Tree_Back_Managing_Task.c">
-      <Filter>My_Code\Tree_Back_Model</Filter>
-    </ClCompile>
     <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\Tree_Back_Model.c">
+      <Filter>My_Code\Tree_Back_Model</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\Task\Tree_Back_Executing_Task.c">
+      <Filter>My_Code\Tree_Back_Model</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\Task\Tree_Back_Managing_Task.c">
       <Filter>My_Code\Tree_Back_Model</Filter>
     </ClCompile>
   </ItemGroup>
