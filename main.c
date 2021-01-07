@@ -96,7 +96,9 @@ int main( void )
 
 	TB_Task* tb_main_task;
 	createTBTask(NULL, 5, sizeof(TB_MQ), NULL, 0, 0, tbManagingTask, "Main_Task", configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, &tb_main_task);
-	createTBTask(NULL, 0, 0, tb_main_task->qin, 0, 0, tbGetUserInput, "User Input", configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, NULL);
+
+	TB_Task* tb_user_task;
+	createTBTask(NULL, 0, 0, tb_main_task->qin, 0, 0, tbGetUserInput, "User Input", configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, &tb_user_task);
 
 	vTaskStartScheduler();
 
