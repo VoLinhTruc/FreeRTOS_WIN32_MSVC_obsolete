@@ -39,7 +39,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>C:\C_Cpp_LIB\Tree_Back_Model\Task;C:\C_Cpp_LIB\Third_Party\uthash\src;C:\C_Cpp_LIB\Tree_Back_Model;C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\include;C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\portable\MSVC-MingW;C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Demo\Common\Include;C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS-Plus\Source\FreeRTOS-Plus-Trace\Include;.\Trace_Recorder_Configuration;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\C_Cpp_LIB\Tree_Back_Model\Task;C:\C_Cpp_LIB\Third_Party\uthash\src;C:\C_Cpp_LIB\Tree_Back_Model\src;C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\include;C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\portable\MSVC-MingW;C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Demo\Common\Include;C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS-Plus\Source\FreeRTOS-Plus-Trace\Include;.\Trace_Recorder_Configuration;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_WIN32_WINNT=0x0601;WINVER=0x400;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -78,7 +78,7 @@
   <ItemGroup>
     <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\Task\Tree_Back_Executing_Task.c" />
     <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\Task\Tree_Back_Managing_Task.c" />
-    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\Tree_Back_Model.c" />
+    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\src\Tree_Back_Model.c" />
     <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS-Plus\Source\FreeRTOS-Plus-Trace\trcKernelPort.c" />
     <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS-Plus\Source\FreeRTOS-Plus-Trace\trcSnapshotRecorder.c" />
     <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\croutine.c" />
