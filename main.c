@@ -12,6 +12,11 @@ should an assert get hit. */
 #include "task.h"
 
 
+#include "Tree_Back_Model.h"
+#include "Tree_Back_Managing_Task.h"
+#include "Tree_Back_Executing_Task.h"
+
+
 #define mainCREATE_SIMPLE_BLINKY_DEMO_ONLY	1
 
 /* This demo uses heap_5.c, and these constants define the sizes of the regions
@@ -78,9 +83,6 @@ static BaseType_t xTraceRunning = pdTRUE;
 
 /*-----------------------------------------------------------*/
 
-#include "Tree_Back_Model.h"
-#include "Tree_Back_Managing_Task.h"
-#include "Tree_Back_Executing_Task.h"
 
 
 int main( void )
