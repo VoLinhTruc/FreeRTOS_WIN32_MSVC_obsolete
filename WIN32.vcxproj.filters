@@ -181,6 +181,9 @@
     <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\src\Tree_Back_Model.c">
       <Filter>My_Code\Tree_Back_Model</Filter>
     </ClCompile>
+    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\src\Tree_Back_Utility.c">
+      <Filter>My_Code\Tree_Back_Model</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FreeRTOSConfig.h">

@@ -101,7 +101,7 @@ int main( void )
 	//initTBTask(NULL, 0, 0, NULL, 0, 0, blinky, "Main_Task", configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, &tb_task_handle);
 
 	TB_Task_Handle tb_main_task = createTBTask();
-	initTBTask(NULL, 5, sizeof(TB_MQ), NULL, 0, 0, tbManagingTask, MANAGING_TASK_NAME, configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, &tb_main_task);
+	initTBTask(NULL, 5, sizeof(TB_Task_Handle), NULL, 0, 0, tbManagingTask, MANAGING_TASK_NAME, configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, &tb_main_task);
 
 	TB_Task_Handle tb_user_task = createTBTask();
 	initTBTask(NULL, 0, 0, tb_main_task->qin, 0, 0, tbGetUserInput, USER_TASK_NAME, configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, &tb_user_task);
