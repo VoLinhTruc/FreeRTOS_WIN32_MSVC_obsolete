@@ -184,6 +184,15 @@
     <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\src\Tree_Back_Utility.c">
       <Filter>My_Code\Tree_Back_Model</Filter>
     </ClCompile>
+    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\src\Tree_Back_Table.c">
+      <Filter>My_Code\Tree_Back_Model</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\src\Tree_Back_Message_Queue.c">
+      <Filter>My_Code\Tree_Back_Model</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\Task\Tree_Back_TBMQ_Delete_Helper.c">
+      <Filter>My_Code\Tree_Back_Model</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FreeRTOSConfig.h">

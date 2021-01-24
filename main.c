@@ -97,14 +97,14 @@ int main( void )
 	See http://www.FreeRTOS.org/trace for more information. */
 	vTraceEnable( TRC_START );
 
-	//TB_Task_Handle tb_task_handle = createTBTask();
-	//initTBTask(NULL, 0, 0, NULL, 0, 0, blinky, "Main_Task", configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, &tb_task_handle);
+	//TB_Task_Handle tb_task_handle = initTBTask();
+	//createTBTask(NULL, 0, 0, NULL, 0, 0, blinky, "Main_Task", configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, &tb_task_handle);
 
-	TB_Task_Handle tb_main_task = createTBTask();
-	initTBTask(NULL, 5, sizeof(TB_Task_Handle), NULL, 0, 0, tbManagingTask, MANAGING_TASK_NAME, configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, &tb_main_task);
+	TB_Task_Handle tb_main_task = initTBTask();
+	createTBTask(NULL, 5, sizeof(TB_MQ_Handle), NULL, 0, 0, tbManagingTask, MANAGING_TASK_NAME, configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, &tb_main_task);
 
-	TB_Task_Handle tb_user_task = createTBTask();
-	initTBTask(NULL, 0, 0, tb_main_task->qin, 0, 0, tbGetUserInput, USER_TASK_NAME, configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, &tb_user_task);
+	TB_Task_Handle tb_user_task = initTBTask();
+	createTBTask(NULL, 0, 0, tb_main_task->qin, 0, 0, tbGetUserInput, USER_TASK_NAME, configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, &tb_user_task);
 
 	vTaskStartScheduler();
 
