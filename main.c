@@ -12,9 +12,18 @@ should an assert get hit. */
 #include "task.h"
 
 
+#define USING_DYNAMIC_TBMQ
+
 #include "Tree_Back_Model.h"
+#ifdef USING_DYNAMIC_TBMQ
 #include "Tree_Back_Managing_Task.h"
 #include "Tree_Back_Executing_Task.h"
+#else
+#include "Tree_Back_Static_Message_Queue.h"
+#include "Tree_Back_Managing_Task_Static_TBMQ.h"
+#include "Tree_Back_Executing_Task_Static_TBMQ.h"
+#endif
+
 
 
 #define mainCREATE_SIMPLE_BLINKY_DEMO_ONLY	1
@@ -97,14 +106,28 @@ int main( void )
 	See http://www.FreeRTOS.org/trace for more information. */
 	vTraceEnable( TRC_START );
 
+	// Simple test - begin ----------------------------------------------------------------------------------------------------------------------------------------
 	//TB_Task_Handle tb_task_handle = initTBTask();
 	//createTBTask(NULL, 0, 0, NULL, 0, 0, blinky, "Main_Task", configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, &tb_task_handle);
+	// Simple test - end ----------------------------------------------------------------------------------------------------------------------------------------
 
+#ifdef USING_DYNAMIC_TBMQ
+	// Using Dynamic TBMQ - begin ----------------------------------------------------------------------------------------------------------------------------------------
 	TB_Task_Handle tb_main_task = initTBTask();
 	createTBTask(NULL, 5, sizeof(TB_MQ_Handle), NULL, 0, 0, tbManagingTask, MANAGING_TASK_NAME, configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, &tb_main_task);
 
 	TB_Task_Handle tb_user_task = initTBTask();
 	createTBTask(NULL, 0, 0, tb_main_task->qin, 0, 0, tbGetUserInput, USER_TASK_NAME, configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, &tb_user_task);
+	// Using Dynamic TBMQ - end ----------------------------------------------------------------------------------------------------------------------------------------
+#else
+	// Using Static TBMQ - begin ----------------------------------------------------------------------------------------------------------------------------------------
+	TB_Task_Handle tb_main_task = initTBTask();
+	createTBTask(NULL, 5, sizeof(Static_TB_MQ_1), NULL, 0, 0, tbManagingTaskStaticTBMQ, STATIC_TBMQ_MANAGING_TASK_NAME, configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, &tb_main_task);
+
+	TB_Task_Handle tb_user_task = initTBTask();
+	createTBTask(NULL, 0, 0, tb_main_task->qin, 0, 0, tbGetUserInputStaticTBMQ, STATIC_TBMQ_USER_TASK_NAME, configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, &tb_user_task);
+	// Using Static TBMQ - end ----------------------------------------------------------------------------------------------------------------------------------------
+#endif
 
 	vTaskStartScheduler();
 
