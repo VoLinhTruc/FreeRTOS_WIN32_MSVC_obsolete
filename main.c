@@ -12,7 +12,7 @@ should an assert get hit. */
 #include "task.h"
 
 
-#define USING_DYNAMIC_TBMQ
+//#define USING_DYNAMIC_TBMQ
 
 #include "Tree_Back_Model.h"
 #ifdef USING_DYNAMIC_TBMQ
