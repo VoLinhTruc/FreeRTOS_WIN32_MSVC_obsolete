@@ -12,7 +12,7 @@ should an assert get hit. */
 #include "task.h"
 
 
-//#define USING_DYNAMIC_TBMQ
+#define USING_DYNAMIC_TBMQ
 
 #include "Tree_Back_Model.h"
 #ifdef USING_DYNAMIC_TBMQ
@@ -115,9 +115,6 @@ int main( void )
 	// Using Dynamic TBMQ - begin ----------------------------------------------------------------------------------------------------------------------------------------
 	TB_Task_Handle tb_main_task = initTBTask();
 	createTBTask(NULL, 5, sizeof(TB_MQ_Handle), NULL, 0, 0, tbManagingTask, MANAGING_TASK_NAME, configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, &tb_main_task);
-
-	TB_Task_Handle tb_user_task = initTBTask();
-	createTBTask(NULL, 0, 0, tb_main_task->qin, 0, 0, tbGetUserInput, USER_TASK_NAME, configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, &tb_user_task);
 	// Using Dynamic TBMQ - end ----------------------------------------------------------------------------------------------------------------------------------------
 #else
 	// Using Static TBMQ - begin ----------------------------------------------------------------------------------------------------------------------------------------

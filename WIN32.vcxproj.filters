@@ -41,9 +41,6 @@
     <Filter Include="My_Code">
       <UniqueIdentifier>{bbb1ade4-a81f-48d3-ae0d-9765197f1f2a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="My_Code\Test">
-      <UniqueIdentifier>{ba026a8c-301c-4673-be00-2f7a077e3289}</UniqueIdentifier>
-    </Filter>
     <Filter Include="My_Code\Tree_Back_Model">
       <UniqueIdentifier>{5a4b76ac-f2d6-4086-adbc-f8bf3a23dfa2}</UniqueIdentifier>
     </Filter>
