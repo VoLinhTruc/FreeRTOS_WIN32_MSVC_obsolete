@@ -11,18 +11,13 @@ should an assert get hit. */
 #include "FreeRTOS.h"
 #include "task.h"
 
-
-#define USING_DYNAMIC_TBMQ
-
 #include "Tree_Back_Model.h"
-#ifdef USING_DYNAMIC_TBMQ
 #include "Tree_Back_Managing_Task.h"
 #include "Tree_Back_Executing_Task.h"
-#else
-#include "Tree_Back_Static_Message_Queue.h"
-#include "Tree_Back_Managing_Task_Static_TBMQ.h"
-#include "Tree_Back_Executing_Task_Static_TBMQ.h"
-#endif
+
+#include "Bico_MQTT_Utility.h"
+#include "Bico_MQTT_Packet_Type.h"
+#include "Bico_MQTT_Generate_Packet_Value.h"
 
 
 
@@ -92,8 +87,7 @@ static BaseType_t xTraceRunning = pdTRUE;
 
 /*-----------------------------------------------------------*/
 
-void blinky(void* pvParameters);
-void blinky1(void* pvParameters);
+void main_task(void* pvParameters);
 
 int main( void )
 {
@@ -107,32 +101,19 @@ int main( void )
 	vTraceEnable( TRC_START );
 
 	// Simple test - begin ----------------------------------------------------------------------------------------------------------------------------------------
-	//TB_Task_Handle tb_task_handle = initTBTask();
-	//createTBTask(NULL, 0, 0, NULL, 0, 0, blinky, "Main_Task", configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, &tb_task_handle);
+	TB_Task_Handle tb_task_handle = initTBTask();
+	createTBTask(NULL, 0, 0, NULL, 0, 0, main_task, "Main_Task", configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, &tb_task_handle);
 	// Simple test - end ----------------------------------------------------------------------------------------------------------------------------------------
 
-#ifdef USING_DYNAMIC_TBMQ
-	// Using Dynamic TBMQ - begin ----------------------------------------------------------------------------------------------------------------------------------------
-	TB_Task_Handle tb_main_task = initTBTask();
-	createTBTask(NULL, 5, sizeof(TB_MQ_Handle), NULL, 0, 0, tbManagingTask, MANAGING_TASK_NAME, configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, &tb_main_task);
-	// Using Dynamic TBMQ - end ----------------------------------------------------------------------------------------------------------------------------------------
-#else
-	// Using Static TBMQ - begin ----------------------------------------------------------------------------------------------------------------------------------------
-	TB_Task_Handle tb_main_task = initTBTask();
-	createTBTask(NULL, 5, sizeof(Static_TB_MQ_1), NULL, 0, 0, tbManagingTaskStaticTBMQ, STATIC_TBMQ_MANAGING_TASK_NAME, configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, &tb_main_task);
-
-	TB_Task_Handle tb_user_task = initTBTask();
-	createTBTask(NULL, 0, 0, tb_main_task->qin, 0, 0, tbGetUserInputStaticTBMQ, STATIC_TBMQ_USER_TASK_NAME, configMINIMAL_STACK_SIZE, tskIDLE_PRIORITY, &tb_user_task);
-	// Using Static TBMQ - end ----------------------------------------------------------------------------------------------------------------------------------------
-#endif
 
 	vTaskStartScheduler();
-
+	
 	return 0;
 }
 /*-----------------------------------------------------------*/
 
-void blinky(void* pvParameters)
+
+void main_task(void* pvParameters)
 {
 	// Get Tree-Back-Task Handle
 	TB_Task_Handle tb_task = (TB_Task_Handle)pvParameters;
@@ -140,44 +121,25 @@ void blinky(void* pvParameters)
 
 	// Setup - begin --------------------------------------------------------------------
 
-	// Setup - end --------------------------------------------------------------------
+	MQTT_Unsuback_Packet_Handle x = MQTTCreateUnsubackPacket();
+	MQTTGenUnsubackValue(x, 69);
+	vTaskDelay(1000);
+	MQTTDeletePacket(x);
 
-	// Infnite loop
-	while (1)
-	{
-
-		// Normal run - begin --------------------------------------------------------------------
-		printf("XXX\r\n");
-		// Normal run - end --------------------------------------------------------------------
-
-
-		// Delay
-		vTaskDelay(500);
-	}
-}
-
-void blinky1(void* pvParameters)
-{
-	// Get Tree-Back-Task Handle
-	TB_Task_Handle tb_task = (TB_Task_Handle)pvParameters;
-
-
-	// Setup - begin --------------------------------------------------------------------
 
 	// Setup - end --------------------------------------------------------------------
 
 	// Infnite loop
-	while (1)
+	while (0)
 	{
 
 		// Normal run - begin --------------------------------------------------------------------
 
-		printf("YYY\r\n");
 		// Normal run - end --------------------------------------------------------------------
 
 
 		// Delay
-		vTaskDelay(500);
+		vTaskDelay(1);
 	}
 }
 

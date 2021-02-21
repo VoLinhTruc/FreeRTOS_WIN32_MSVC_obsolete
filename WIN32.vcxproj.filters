@@ -41,8 +41,8 @@
     <Filter Include="My_Code">
       <UniqueIdentifier>{bbb1ade4-a81f-48d3-ae0d-9765197f1f2a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="My_Code\Tree_Back_Model">
-      <UniqueIdentifier>{5a4b76ac-f2d6-4086-adbc-f8bf3a23dfa2}</UniqueIdentifier>
+    <Filter Include="My_Code\Bico_MQTT">
+      <UniqueIdentifier>{ddf59481-f929-4f3f-ab0b-b16c4b511000}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -169,32 +169,29 @@
     <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Demo\Common\Minimal\TaskNotifyArray.c">
       <Filter>Demo App Source\Full_Demo\Common Demo Tasks</Filter>
     </ClCompile>
-    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\Task\Tree_Back_Executing_Task.c">
-      <Filter>My_Code\Tree_Back_Model</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\Task\Tree_Back_Managing_Task.c">
-      <Filter>My_Code\Tree_Back_Model</Filter>
+    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\src\Tree_Back_Message_Queue.c">
+      <Filter>My_Code</Filter>
     </ClCompile>
     <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\src\Tree_Back_Model.c">
-      <Filter>My_Code\Tree_Back_Model</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\src\Tree_Back_Utility.c">
-      <Filter>My_Code\Tree_Back_Model</Filter>
+      <Filter>My_Code</Filter>
     </ClCompile>
     <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\src\Tree_Back_Table.c">
-      <Filter>My_Code\Tree_Back_Model</Filter>
+      <Filter>My_Code</Filter>
     </ClCompile>
-    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\src\Tree_Back_Message_Queue.c">
-      <Filter>My_Code\Tree_Back_Model</Filter>
+    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\src\Tree_Back_Utility.c">
+      <Filter>My_Code</Filter>
     </ClCompile>
-    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\Task\Tree_Back_TBMQ_Delete_Helper.c">
-      <Filter>My_Code\Tree_Back_Model</Filter>
+    <ClCompile Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Utility.c">
+      <Filter>My_Code\Bico_MQTT</Filter>
     </ClCompile>
-    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\Task\Tree_Back_Using_Static_TBMQ\Tree_Back_Managing_Task_Static_TBMQ.c">
-      <Filter>My_Code\Tree_Back_Model</Filter>
+    <ClCompile Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Packet_Type.c">
+      <Filter>My_Code\Bico_MQTT</Filter>
     </ClCompile>
-    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\Task\Tree_Back_Using_Static_TBMQ\Tree_Back_Executing_Task_Static_TBMQ.c">
-      <Filter>My_Code\Tree_Back_Model</Filter>
+    <ClCompile Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Generate_Packet_Value.c">
+      <Filter>My_Code\Bico_MQTT</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Remaining_Length.c">
+      <Filter>My_Code\Bico_MQTT</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
