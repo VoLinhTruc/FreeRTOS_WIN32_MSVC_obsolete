@@ -76,7 +76,9 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Generate_Packet_Value.c" />
+    <ClCompile Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Packet_Deserialize.c" />
+    <ClCompile Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Packet_Quick_Init.c" />
+    <ClCompile Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Packet_Serialize.c" />
     <ClCompile Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Packet_Type.c" />
     <ClCompile Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Remaining_Length.c" />
     <ClCompile Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Utility.c" />
@@ -117,6 +119,9 @@
     <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\src\Tree_Back_Model.c" />
     <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\src\Tree_Back_Table.c" />
     <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\src\Tree_Back_Utility.c" />
+    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\Task\Tree_Back_Executing_Task.c" />
+    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\Task\Tree_Back_Managing_Task.c" />
+    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\Task\Tree_Back_TBMQ_Delete_Helper.c" />
     <ClCompile Include="main.c">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -142,6 +147,13 @@
     <ClCompile Include="Run-time-stats-utils.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Definition.h" />
+    <ClInclude Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Packet_Deserialize.h" />
+    <ClInclude Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Packet_Quick_Init.h" />
+    <ClInclude Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Packet_Serialize.h" />
+    <ClInclude Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Packet_Type.h" />
+    <ClInclude Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Remaining_Length.h" />
+    <ClInclude Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Utility.h" />
     <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\include\event_groups.h" />
     <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\include\message_buffer.h" />
     <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\include\stream_buffer.h" />
@@ -156,6 +168,8 @@
     <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\include\queue.h" />
     <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\include\semphr.h" />
     <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\include\task.h" />
+    <ClInclude Include="Header.h" />
+    <ClInclude Include="Header1.h" />
     <ClInclude Include="Trace_Recorder_Configuration\trcConfig.h" />
   </ItemGroup>
   <ItemGroup>
