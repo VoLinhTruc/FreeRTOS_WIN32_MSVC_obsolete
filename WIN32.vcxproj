@@ -15,7 +15,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -39,7 +39,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>C:\C_Cpp_LIB\Bico_MQTT\src;C:\C_Cpp_LIB\Tree_Back_Model\Task\Tree_Back_Using_Static_TBMQ;C:\C_Cpp_LIB\Tree_Back_Model\Task;C:\C_Cpp_LIB\Third_Party\uthash\src;C:\C_Cpp_LIB\Tree_Back_Model\src;C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\include;C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\portable\MSVC-MingW;C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Demo\Common\Include;C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS-Plus\Source\FreeRTOS-Plus-Trace\Include;.\Trace_Recorder_Configuration;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\FreeRTOS-Kernel\include;C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\FreeRTOS-Kernel\portable\MSVC-MingW;C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Demo\Common\Include;C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS-Plus\Source\FreeRTOS-Plus-Trace\Include;.\Trace_Recorder_Configuration;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_WIN32_WINNT=0x0601;WINVER=0x400;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -47,14 +47,12 @@
       <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
       <ObjectFileName>.\Debug/</ObjectFileName>
       <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
       <AdditionalOptions>/wd4210 %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4574;4820;4668;4255;4710;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-      <LanguageStandard>Default</LanguageStandard>
-      <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -76,19 +74,12 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Packet_Deserialize.c" />
-    <ClCompile Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Packet_Quick_Init.c" />
-    <ClCompile Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Packet_Serialize.c" />
-    <ClCompile Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Packet_Type.c" />
-    <ClCompile Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Remaining_Length.c" />
-    <ClCompile Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Utility.c" />
     <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS-Plus\Source\FreeRTOS-Plus-Trace\trcKernelPort.c" />
     <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS-Plus\Source\FreeRTOS-Plus-Trace\trcSnapshotRecorder.c" />
-    <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\croutine.c" />
-    <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\event_groups.c" />
-    <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\portable\MemMang\heap_5.c" />
-    <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\stream_buffer.c" />
-    <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\timers.c" />
+    <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\FreeRTOS-Kernel\event_groups.c" />
+    <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\FreeRTOS-Kernel\portable\MemMang\heap_5.c" />
+    <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\FreeRTOS-Kernel\stream_buffer.c" />
+    <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\FreeRTOS-Kernel\timers.c" />
     <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Demo\Common\Minimal\AbortDelay.c" />
     <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Demo\Common\Minimal\BlockQ.c" />
     <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Demo\Common\Minimal\blocktim.c" />
@@ -115,30 +106,23 @@
     <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Demo\Common\Minimal\TaskNotify.c" />
     <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Demo\Common\Minimal\TaskNotifyArray.c" />
     <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Demo\Common\Minimal\timerdemo.c" />
-    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\src\Tree_Back_Message_Queue.c" />
-    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\src\Tree_Back_Model.c" />
-    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\src\Tree_Back_Table.c" />
-    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\src\Tree_Back_Utility.c" />
-    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\Task\Tree_Back_Executing_Task.c" />
-    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\Task\Tree_Back_Managing_Task.c" />
-    <ClCompile Include="C:\C_Cpp_LIB\Tree_Back_Model\Task\Tree_Back_TBMQ_Delete_Helper.c" />
     <ClCompile Include="main.c">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
-    <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\list.c">
+    <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\FreeRTOS-Kernel\list.c">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
-    <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\portable\MSVC-MingW\port.c">
+    <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\FreeRTOS-Kernel\portable\MSVC-MingW\port.c">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
-    <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\queue.c">
+    <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\FreeRTOS-Kernel\queue.c">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
-    <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\tasks.c">
+    <ClCompile Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\FreeRTOS-Kernel\tasks.c">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -147,30 +131,26 @@
     <ClCompile Include="Run-time-stats-utils.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Definition.h" />
-    <ClInclude Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Packet_Deserialize.h" />
-    <ClInclude Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Packet_Quick_Init.h" />
-    <ClInclude Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Packet_Serialize.h" />
-    <ClInclude Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Packet_Type.h" />
-    <ClInclude Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Remaining_Length.h" />
-    <ClInclude Include="C:\C_Cpp_LIB\Bico_MQTT\src\Bico_MQTT_Utility.h" />
-    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\include\event_groups.h" />
-    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\include\message_buffer.h" />
-    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\include\stream_buffer.h" />
-    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\include\timers.h" />
-    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\portable\MSVC-MingW\portmacro.h" />
+    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS-Plus\Source\FreeRTOS-Plus-Trace\Include\trcKernelPort.h" />
+    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS-Plus\Source\FreeRTOS-Plus-Trace\Include\trcRecorder.h" />
+    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\FreeRTOS-Kernel\include\event_groups.h" />
+    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\FreeRTOS-Kernel\include\message_buffer.h" />
+    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\FreeRTOS-Kernel\include\stream_buffer.h" />
+    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\FreeRTOS-Kernel\include\timers.h" />
+    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\FreeRTOS-Kernel\portable\MSVC-MingW\portmacro.h" />
     <ClInclude Include="FreeRTOSConfig.h" />
-    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\include\croutine.h" />
-    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\include\FreeRTOS.h" />
-    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\include\list.h" />
-    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\include\portable.h" />
-    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\include\projdefs.h" />
-    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\include\queue.h" />
-    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\include\semphr.h" />
-    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\include\task.h" />
-    <ClInclude Include="Header.h" />
-    <ClInclude Include="Header1.h" />
+    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\FreeRTOS-Kernel\include\FreeRTOS.h" />
+    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\FreeRTOS-Kernel\include\list.h" />
+    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\FreeRTOS-Kernel\include\portable.h" />
+    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\FreeRTOS-Kernel\include\projdefs.h" />
+    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\FreeRTOS-Kernel\include\queue.h" />
+    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\FreeRTOS-Kernel\include\semphr.h" />
+    <ClInclude Include="C:\C_Cpp_LIB\Third_Party\FreeRTOS\FreeRTOS\Source\FreeRTOS-Kernel\include\task.h" />
+    <ClInclude Include="utilities.h" />
     <ClInclude Include="Trace_Recorder_Configuration\trcConfig.h" />
+    <ClInclude Include="Trace_Recorder_Configuration\trcKernelPortConfig.h" />
+    <ClInclude Include="Trace_Recorder_Configuration\trcKernelPortSnapshotConfig.h" />
+    <ClInclude Include="Trace_Recorder_Configuration\trcSnapshotConfig.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
